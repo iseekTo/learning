@@ -1,7 +1,51 @@
-<h1>Hello World</h1>
+<!DOCTYPE html>
+<html lang="en">
 
-estimate verb
-es·​ti·​mate ˈe-stə-ˌmāt 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      margin: 0 auto;
+      width: 1280px;
+    }
+  </style>
+</head>
 
-Examples
-  They estimated the distance at about three miles
+<body>
+  <div class="flex items-center flex-col text-center">
+    <div class="text-left">
+        <div class="flex items-baseline">
+          <h1 class="text-3xl">Estimate</h1>
+          <span class="text-[#4a7d95] ml-2">Verb</span>
+        </div>
+        <p id="play" class="ml-5 cursor-pointer	">
+          es·​ti·​mate ˈe-stə-ˌmāt
+        </p>
+    
+        <div class="mt-5">
+          <h3>Examples</h3>
+          <div class="ml-5">
+            <p>
+              They estimated the distance at about three miles
+            </p>
+          </div>
+        </div>
+    </div>
+  </div>
+</body>
+
+<script>
+  // 点击play元素，播放assets下的音频 销毁音频对象
+  document.getElementById('play').addEventListener('click', function () {
+    var audio = new Audio('assets/estimate.mp3');
+    audio.play();
+    audio.onended = function () {
+      audio = null;
+    }
+  })
+</script>
+
+</html>
